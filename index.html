@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ANSI code generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>ANSI code generator</h1>
+    <div class="menu">
+        <div class="submenu">
+            <button class="reset-btn">Reset</button>
+        </div>
+        <div class="submenu">
+            <p>Foreground Color:</p>
+            <button class="fgcolor-btn">Red</button>
+            <button class="fgcolor-btn">Green</button>
+            <button class="fgcolor-btn">Yellow</button>
+            <button class="fgcolor-btn">Blue</button>
+        </div>
+        <div class="submenu">
+            <p>Style:</p>
+            <button class="style-btn">Bold</button>
+            <button class="style-btn">Italic</button>
+            <button class="style-btn">Underline</button>
+            <button class="style-btn">Strikethrough</button>
+        </div>
+    </div>
+    <div class="menu">
+        <input onclick="this.select();" type="text" id="output" readonly placeholder="output here" >
+        <button id="copy">copy</button>
+    </div>
+</body>
+</html>

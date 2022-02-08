@@ -1,0 +1,63 @@
+@font-face { font-family: FiraCode; src: url('FiraCode.ttf'); }
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    font-family: FiraCode;
+}
+
+input {
+    background: #262626;
+    font-family: inherit;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+button {
+    font-family: inherit;
+    background-color: rgb(119, 119, 119);
+    border-radius: 8px;
+    border-width: 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.submenu > * {
+    margin: 0 5px;
+}
