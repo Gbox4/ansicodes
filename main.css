@@ -87,3 +87,16 @@ button {
 .submenu > * {
     margin: 5px 5px;
 }
+
+.btn-bold {
+    font-weight: bold;
+}
+.btn-italic {
+    font-style: italic;
+}
+.btn-underline {
+    text-decoration: underline;
+}
+.btn-strikethrough {
+    text-decoration: line-through;
+}
