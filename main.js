@@ -8,6 +8,7 @@ window.onload = () => {
     const codes = {
         "Reset": "0",
 
+        /*
         "Black-fg":"30",
         "Dark-Red-fg":"31",
         "Dark-Green-fg":"32",
@@ -15,7 +16,15 @@ window.onload = () => {
         "Dark-Blue-fg":"34",
         "Dark-Magenta-fg":"35",
         "Dark-Cyan-fg":"36",
-        "Light-Gray-fg":"37",
+        "Light-Gray-fg":"37",*/
+        "Black-fg":"38;5;0",
+        "Dark-Red-fg":"38;5;1",
+        "Dark-Green-fg":"38;5;2",
+        "Dark-Yellow-fg":"38;5;3",
+        "Dark-Blue-fg":"38;5;4",
+        "Dark-Magenta-fg":"38;5;5",
+        "Dark-Cyan-fg":"38;5;6",
+        "Light-Gray-fg":"38;5;7",
         "Dark-Gray-fg":"38;5;8",
         "Light-Red-fg":"38;5;9",
         "Light-Green-fg":"38;5;10",
@@ -25,7 +34,8 @@ window.onload = () => {
         "Light-Cyan-fg":"38;5;14",
         "White-fg":"38;5;15",
         "Default-fg":"39",
-        
+
+        /*
         "Black-bg":"40",
         "Dark-Red-bg":"41",
         "Dark-Green-bg":"42",
@@ -33,7 +43,15 @@ window.onload = () => {
         "Dark-Blue-bg":"44",
         "Dark-Magenta-bg":"45",
         "Dark-Cyan-bg":"46",
-        "Light-Gray-bg":"47",
+        "Light-Gray-bg":"47",*/
+        "Black-bg":"48;5;0",
+        "Dark-Red-bg":"48;5;1",
+        "Dark-Green-bg":"48;5;2",
+        "Dark-Yellow-bg":"48;5;3",
+        "Dark-Blue-bg":"48;5;4",
+        "Dark-Magenta-bg":"48;5;5",
+        "Dark-Cyan-bg":"48;5;6",
+        "Light-Gray-bg":"48;5;7",
         "Dark-Gray-bg":"48;5;8",
         "Light-Red-bg":"48;5;9",
         "Light-Green-bg":"48;5;10",
@@ -65,7 +83,7 @@ window.onload = () => {
     }
 
     let selFgcolor = (e) => {
-        if (settings.fgcolor === e.innerHTML){
+        if (settings.fgcolor === e.innerHTML.replace(/ /g,"-")){
             settings.fgcolor = ""
         }
         else{
@@ -76,7 +94,7 @@ window.onload = () => {
         updateOutput()
     }
     let selBgcolor = (e) => {
-        if (settings.bgcolor === e.innerHTML){
+        if (settings.bgcolor === e.innerHTML.replace(/ /g,"-")){
             settings.bgcolor = ""
         }
         else{
@@ -125,7 +143,7 @@ window.onload = () => {
         if (settings.fgcolor){
             output += codes[settings.fgcolor + "-fg"] + ";"
             fgcolor_btns.forEach(b => {
-                if (b.innerHTML === settings.fgcolor) {
+                if (b.innerHTML.replace(/ /g,"-") === settings.fgcolor) {
                     b.style.backgroundColor = "#507f9b"
                 }
             })
@@ -133,7 +151,7 @@ window.onload = () => {
         if (settings.bgcolor){
             output += codes[settings.bgcolor + "-bg"] + ";"
             bgcolor_btns.forEach(b => {
-                if (b.innerHTML === settings.bgcolor) {
+                if (b.innerHTML.replace(/ /g,"-") === settings.bgcolor) {
                     b.style.backgroundColor = "#507f9b"
                 }
             })

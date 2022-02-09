@@ -77,7 +77,7 @@ button {
 }
 
 .submenu {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -85,7 +85,7 @@ button {
     margin: 5px 0;
 }
 .submenu > * {
-    margin: 5px 5px;
+    margin: 5px 0px;
 }
 
 .btn-bold {
@@ -99,4 +99,69 @@ button {
 }
 .btn-strikethrough {
     text-decoration: line-through;
+}
+
+.btn-black {
+    border: #000000 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-red {
+    border: #aa0000 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-green {
+    border: #00aa00 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-yellow {
+    border: #aaaa00 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-blue {
+    border: #0000aa 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-magenta {
+    border: #aa00aa 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-cyan {
+    border: #00aaaa 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-gray {
+    border: #aaaaaa 3px solid;
+    padding: 7px 9px;
+}
+.btn-dark-gray {
+    border: #555555 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-red {
+    border: #ff5555 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-green {
+    border: #55ff55 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-yellow {
+    border: #ffff55 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-blue {
+    border: #5555ff 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-magenta {
+    border: #ff55ff 3px solid;
+    padding: 7px 9px;
+}
+.btn-light-cyan {
+    border: #55ffff 3px solid;
+    padding: 7px 9px;
+}
+.btn-white {
+    border: #ffffff 3px solid;
+    padding: 7px 9px;
 }
