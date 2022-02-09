@@ -6,32 +6,47 @@ window.onload = () => {
     }
 
     const codes = {
-        "Reset": 0,
+        "Reset": "0",
 
-        "Black-fg":30,
-        "Red-fg":31,
-        "Green-fg":32,
-        "Yellow-fg":33,
-        "Blue-fg":34,
-        "Magenta-fg":35,
-        "Cyan-fg":36,
-        "White-fg":37,
-        "Default-fg":39,
+        "Black-fg":"30",
+        "Dark-Red-fg":"31",
+        "Dark-Green-fg":"32",
+        "Dark-Yellow-fg":"33",
+        "Dark-Blue-fg":"34",
+        "Dark-Magenta-fg":"35",
+        "Dark-Cyan-fg":"36",
+        "Light-Gray-fg":"37",
+        "Dark-Gray-fg":"38;5;8",
+        "Light-Red-fg":"38;5;9",
+        "Light-Green-fg":"38;5;10",
+        "Light-Yellow-fg":"38;5;11",
+        "Light-Blue-fg":"38;5;12",
+        "Light-Magenta-fg":"38;5;13",
+        "Light-Cyan-fg":"38;5;14",
+        "White-fg":"38;5;15",
+        "Default-fg":"39",
         
-        "Black-bg": 40,
-        "Red-bg": 41,
-        "Green-bg": 42,
-        "Yellow-bg": 43,
-        "Blue-bg": 44,
-        "Magenta-bg": 45,
-        "Cyan-bg": 46,
-        "White-bg": 47,
-        "Default-bg": 49,        
+        "Black-bg":"40",
+        "Dark-Red-bg":"41",
+        "Dark-Green-bg":"42",
+        "Dark-Yellow-bg":"43",
+        "Dark-Blue-bg":"44",
+        "Dark-Magenta-bg":"45",
+        "Dark-Cyan-bg":"46",
+        "Light-Gray-bg":"47",
+        "Dark-Gray-bg":"48;5;8",
+        "Light-Red-bg":"48;5;9",
+        "Light-Green-bg":"48;5;10",
+        "Light-Yellow-bg":"48;5;11",
+        "Light-Blue-bg":"48;5;12",
+        "Light-Magenta-bg":"48;5;13",
+        "Light-Cyan-bg":"48;5;14",
+        "White-bg":"48;5;15",  
 
-        "Bold": 1,
-        "Italic": 3,
-        "Underline": 4,
-        "Strikethrough": 9,
+        "Bold": "1",
+        "Italic": "3",
+        "Underline": "4",
+        "Strikethrough": "9",
     }
 
     const all_btns = document.querySelectorAll("button")
@@ -53,7 +68,7 @@ window.onload = () => {
             settings.fgcolor = ""
         }
         else{
-            settings.fgcolor = e.innerHTML
+            settings.fgcolor = e.innerHTML.replace(/ /g,"-")
         }
 
         settings.reset = false
@@ -64,7 +79,7 @@ window.onload = () => {
             settings.bgcolor = ""
         }
         else{
-            settings.bgcolor = e.innerHTML
+            settings.bgcolor = e.innerHTML.replace(/ /g,"-")
         }
 
         settings.reset = false
