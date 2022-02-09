@@ -42,6 +42,7 @@ window.onload = () => {
         "Light-Magenta-bg":"48;5;13",
         "Light-Cyan-bg":"48;5;14",
         "White-bg":"48;5;15",  
+        "Default-bg":"49",
 
         "Bold": "1",
         "Italic": "3",
