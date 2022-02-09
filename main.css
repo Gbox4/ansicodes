@@ -13,10 +13,32 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #262626;
     font-family: FiraCode;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.help {
+    margin: 20px 0;
+}
+
+.head {
+    width: 96%;
+    margin: 20px 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #output {

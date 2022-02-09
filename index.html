@@ -9,52 +9,64 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1>ANSI escape code generator</h1>
-    <div class="menu">
-        <div class="submenu">
-            <button class="reset-btn">Reset</button>
+    <div class="head">
+        <div>
+            <a href="index.html">home</a>
+            <a href="help.html">help</a>
         </div>
-        <div class="submenu">
-            <p>Foreground Color:</p>
-            <button class="fgcolor-btn">Default</button>
-            <button class="fgcolor-btn">Black</button>
-            <button class="fgcolor-btn">Red</button>
-            <button class="fgcolor-btn">Green</button>
-            <button class="fgcolor-btn">Yellow</button>
-            <button class="fgcolor-btn">Blue</button>
-            <button class="fgcolor-btn">Magenta</button>
-            <button class="fgcolor-btn">Cyan</button>
-            <button class="fgcolor-btn">White</button>
+        <a href="https://gabebanks.net">gabebanks.net</a>
+    </div>
+    <div class="main">
+        <h1>ANSI escape code generator</h1>
+        <div class="menu">
+            <div class="submenu">
+                <button class="reset-btn">Reset</button>
+            </div>
+            <div class="submenu">
+                <p>Foreground Color:</p>
+                <button class="fgcolor-btn">Default</button>
+                <button class="fgcolor-btn">Black</button>
+                <button class="fgcolor-btn">Red</button>
+                <button class="fgcolor-btn">Green</button>
+                <button class="fgcolor-btn">Yellow</button>
+                <button class="fgcolor-btn">Blue</button>
+                <button class="fgcolor-btn">Magenta</button>
+                <button class="fgcolor-btn">Cyan</button>
+                <button class="fgcolor-btn">White</button>
+            </div>
+            <div class="submenu">
+                <p>Background Color:</p>
+                <button class="bgcolor-btn">Default</button>
+                <button class="bgcolor-btn">Black</button>
+                <button class="bgcolor-btn">Red</button>
+                <button class="bgcolor-btn">Green</button>
+                <button class="bgcolor-btn">Yellow</button>
+                <button class="bgcolor-btn">Blue</button>
+                <button class="bgcolor-btn">Magenta</button>
+                <button class="bgcolor-btn">Cyan</button>
+                <button class="bgcolor-btn">White</button>
+            </div>
+            <div class="submenu">
+                <p>Style:</p>
+                <button class="style-btn">Bold</button>
+                <button class="style-btn">Italic</button>
+                <button class="style-btn">Underline</button>
+                <button class="style-btn">Strikethrough</button>
+            </div>
+            <div class="submenu">
+                <p>Escape sequence:</p>
+                <button class="escape-btn">\x1b</button>
+                <button class="escape-btn">\033</button>
+                <button class="escape-btn">\e</button>
+            </div>
         </div>
-        <div class="submenu">
-            <p>Background Color:</p>
-            <button class="bgcolor-btn">Default</button>
-            <button class="bgcolor-btn">Black</button>
-            <button class="bgcolor-btn">Red</button>
-            <button class="bgcolor-btn">Green</button>
-            <button class="bgcolor-btn">Yellow</button>
-            <button class="bgcolor-btn">Blue</button>
-            <button class="bgcolor-btn">Magenta</button>
-            <button class="bgcolor-btn">Cyan</button>
-            <button class="bgcolor-btn">White</button>
-        </div>
-        <div class="submenu">
-            <p>Style:</p>
-            <button class="style-btn">Bold</button>
-            <button class="style-btn">Italic</button>
-            <button class="style-btn">Underline</button>
-            <button class="style-btn">Strikethrough</button>
-        </div>
-        <div class="submenu">
-            <p>Escape sequence:</p>
-            <button class="escape-btn">\x1b</button>
-            <button class="escape-btn">\033</button>
-            <button class="escape-btn">\e</button>
+        <div class="menu">
+            <input onclick="this.select();" type="text" id="output" readonly placeholder="output here" >
+            <button id="copy">copy</button>
         </div>
     </div>
-    <div class="menu">
-        <input onclick="this.select();" type="text" id="output" readonly placeholder="output here" >
-        <button id="copy">copy</button>
+    <div class="foot">
+        
     </div>
 </body>
 </html>

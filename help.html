@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ANSI code generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="head">
+        <div>
+            <a href="index.html">home</a>
+            <a href="help.html">help</a>
+        </div>
+        <a href="https://gabebanks.net">gabebanks.net</a>
+    </div>
+    <div class="main">
+        <h1>What is an ANSI escape code?</h1>
+        <p class="help">
+            ANSI escape codes are special sequences of characters used to print certain styles and colors to terminal emulators.
+            The codes are prefixed by an escape sequence, such as \x1b. Then, the codes are listed between '[' and 'm', delimited by semicolons ';'.
+            Each code is a number corresponding to a different style. <br/><br/> For example, the code for red text is 31. Thus, if you were to print \x1b[31m to the terminal,
+            any text following would be red. Thus it is important to print the escape code for RESET (\x1b[0m) after finishing printing your stylized text, to return
+            the style back to normal. <br/><br/> More information can be found <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797">here</a>.
+        </p>
+    </div>
+    <div class="foot">
+        
+    </div>
+</body>
+</html>
