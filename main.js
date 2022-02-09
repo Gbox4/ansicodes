@@ -101,7 +101,7 @@ window.onload = () => {
                 bgcolor: "",
                 style: [],
                 reset: true,
-                escape: "\\x1b",
+                escape: settings.escape,
             }
         }
 
