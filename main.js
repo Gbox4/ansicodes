@@ -1,10 +1,12 @@
 window.onload = () => {
 
+    // Add copy function to copy button
     document.getElementById("copy").onclick = () => {
         document.getElementById("output").select()
         document.execCommand("copy")
     }
 
+    // Constant table representing ANSI codes
     const codes = {
         "Reset": 0,
 
@@ -34,12 +36,14 @@ window.onload = () => {
         "Strikethrough": 9,
     }
 
+    // Get groups of buttons
     const all_btns = document.querySelectorAll("button")
     const fgcolor_btns = document.querySelectorAll(".fgcolor-btn")
     const bgcolor_btns = document.querySelectorAll(".bgcolor-btn")
     const style_btns = document.querySelectorAll(".style-btn")
     const escape_btns = document.querySelectorAll(".escape-btn")
 
+    // Default settings
     let settings = {
         fgcolor: "",
         bgcolor: "",
@@ -48,6 +52,7 @@ window.onload = () => {
         escape: "\\x1b",
     }
 
+    // Functions to handle button clicks
     let selFgcolor = (e) => {
         if (settings.fgcolor === e.innerHTML){
             settings.fgcolor = ""
@@ -89,12 +94,15 @@ window.onload = () => {
         updateOutput()
     }
 
+    // Update the screen each time the button is clicked
     let updateOutput = () => {
 
+        // Reset the button's color to all be inactive
         all_btns.forEach(x => {
             x.style.backgroundColor = "#777777"
         })
 
+        // Reset settings back to default
         if (settings.reset) {
             settings = {
                 fgcolor: "",
@@ -105,6 +113,7 @@ window.onload = () => {
             }
         }
 
+        // Go through each setting and add the corresponding ANSI code
         let output = ""
         if (settings.fgcolor){
             output += codes[settings.fgcolor + "-fg"] + ";"
@@ -136,20 +145,25 @@ window.onload = () => {
             }
         })
 
+        // If it is a reset command, show the reset code
         if (settings.reset) {
             document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#507f9b"
             document.getElementById('output').value = settings.escape + "[0m"
         }
+        // If nothing is selected, reset the output box
         else if (output === "") {
             document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#777777"
             document.getElementById('output').value = ""
         }
+        // Otherwise, proceed as normal.
         else {
             document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#777777"
+            // Construct the resulting escape sequence + ANSI codes
             document.getElementById('output').value = settings.escape + "[" + output.slice(0, -1) + "m"
         }
     }
 
+    // Apply the handler functions to each button
     fgcolor_btns.forEach(x => {
         x.onclick = () => {selFgcolor(x)}
     })
