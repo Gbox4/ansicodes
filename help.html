@@ -25,14 +25,31 @@
         </div>
         <a href="https://gabebanks.net">gabebanks.net</a>
     </div>
-    <div class="main">
-        <h1>What is an ANSI escape code?</h1>
+    <div class="main helpbox">
+        <h1>Help<br/><br/></h1>
+        <h2>What is an ANSI escape code?</h2>
         <p class="help">
             ANSI escape codes are special sequences of characters used to print certain styles and colors to terminal emulators.
             The codes are prefixed by an escape sequence, such as \x1b. Then, the codes are listed between '[' and 'm', delimited by semicolons ';'.
-            Each code is a number corresponding to a different style. <br/><br/> For example, the code for red text is 31. Thus, if you were to print \x1b[31m to the terminal,
-            any text following would be red. Thus it is important to print the escape code for RESET (\x1b[0m) after finishing printing your stylized text, to return
-            the style back to normal. <br/><br/> More information can be found <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797">here</a>.
+            Each code is a number corresponding to a different style.
+        </p>
+        <h2>Example</h2>
+        <p class="help">
+            For example, the code for red text is 31. Thus, if you were to print \x1b[31m to the terminal,
+            any text following would be red.
+        </p>
+        <img src='ex1.png' class='help'/>
+        <p class="help">
+            Thus it is important to print the escape code for RESET (\x1b[0m) after finishing printing your stylized text, to return
+            the style back to normal.
+        </p>
+        <img src='ex2.png' class='help'/>
+        <h2>More information</h2>
+        <p class="help">
+            More information can be found <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797">here</a>.
+        </p>
+        <p class="help">
+            Here is a <a href='https://www.reddit.com/r/linux/comments/so61ne/i_made_a_tool_to_generate_ansi_escape_codes_so/'>recorded demo on reddit</a>.
         </p>
     </div>
     <div class="foot">
